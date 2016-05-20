@@ -1,0 +1,10 @@
+How long did you spend working on this project?
+	Started Lessons: May 20th, excited to use objects, methods, and apply lessons
+
+What was the most rewarding challenge you conquered?
+What two additional features did you build? Why?
+Where do you still have room to grow?
+
+Notes: 
+Initial challenge: Find away to prevent duplicate products
+Approach: Started with identifying classes and some of the methods I needed to work on. (a skeleton so to speak) and made sure I could run commented code in my console. 
