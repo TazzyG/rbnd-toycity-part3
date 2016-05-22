@@ -1,5 +1,3 @@
-require 'json'
-
 class Product
 	attr_reader :title, :price, :stock 
 	
@@ -46,7 +44,7 @@ class Product
   	unless @@products.map{|product|product.title}.include? @title
   		@@products << self
     else
-			raise DuplicateProductError, "#{@title} already exists."
+			raise DuplicateProductError, "#{@name} already exists."
 
 		end
   end

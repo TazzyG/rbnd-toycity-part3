@@ -1,7 +1,8 @@
-require 'json'
+class Customer
 
-class Customers
 	attr_reader :name 
+
+	@@customers = []
 
  def initialize(options={})
   	@name = options[:name]
@@ -10,16 +11,25 @@ class Customers
   def self.all
   	@@customers
   end
-  def find_by_name
-  	# return a single product based on its title
+  def self.find_by_name(search_criteria)
+  	# return a single customer based on his/her name
+  	@@customers.map do |customer|
+  		if customer.name == search_criteria
+  			return customer
+  		end
+  	end
   end
 
+
   private
+
   def add_to_customers
-  	#if # criteria for unique product
+  	
+  	unless @@customers.map{|customer|customer.name}.include? @name
   		@@customers << self
-  	#else
-  		#raise DuplicateProductError
-  	#end
+    else
+			raise DuplicateCustomerError, "#{@title} already exists."
+
+		end
   end
 end
