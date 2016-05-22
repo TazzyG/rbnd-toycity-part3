@@ -17,17 +17,19 @@ class Product
   		end
   	end
   end
-
+  def reduce_stock
+  	@stock = @stock - 1
+  end
   def self.all
   	@@products
   end
   
   def self.in_stock
-  	products_in_stock = []
+  	stock_array = []
   	@@products.map do |product|
   	# array of all products with stock greater than zero
 	  	if product.in_stock?
-	  		products_in_stock << product
+	  		stock_array << product
 	  	end
 	  end
   end
