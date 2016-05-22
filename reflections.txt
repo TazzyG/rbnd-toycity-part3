@@ -6,5 +6,32 @@ What two additional features did you build? Why?
 Where do you still have room to grow?
 
 Notes: 
-Initial challenge: Find away to prevent duplicate products
-Approach: Started with identifying classes and some of the methods I needed to work on. (a skeleton so to speak) and made sure I could run commented code in my console. 
+Initial challenge: Find away to prevent duplicate products (defer this, need to learn more)
+Approach: 
+	1 Started by identifying classes and some of the methods I needed to work on. (a skeleton so to speak) and made sure I could run commented code in my console. 
+	2 (SCRAPPED ) Decided this is a set of reports with json data so will create data and reports for each class ? 
+	 Let's decide headings. (Main Title = Inventory Report) SubTitles, Customers, Inventory, Performance (instead of transactions) ... Assumption, that we even need reports. It would mean App.rb is just a test.  SCRAPPED THIS AS THIS IS JUST A PROTOTYPE, we will do proof of concept in the console, Reports come later. 
+  3 Plan, build some methods based on our awesome knowledge. Draw mainly on the ToDoList project, come back to the previous ToyCity examples. Todolist.rb is (product.rb, errors.rb, customer.rb, and transaction.rb) app.rb is udacitask.rb If we need reports, we will build after. 
+
+  CHURN = (finally figured out product.title, needs map).. did alot of searching on array methods with unsuccessful results, tried in console, saw that product = Product.new, I was able to see title but not Product.all (first hint that I was dealing with with an array of product items, not hashes) 
+  CHURN = Using self in the methods. NoMethodError: undefined method `find_by_title' for Product:Class 
+  Small Churn, needed to add attr_reader and options to find stock and price. 
+
+  Helpfull Techniques: Using the Console, and copying and pasting app.rb lines, Found some answers on StackOverflow, and Udacity forum. 
+
+  Day 2 
+
+  Returning an Error (duplicate product): I am able to make this work in IRB but when I run app.rb it breaks?! Not sure if that is supposed to happen. 
+
+  CHURN = (Getting used to Self versus product) In the case of in stock, versus self.instock. methods for in_stock. I tried to do it as one method, could not make it work. Because @product.stock did not work. This is still a learning area for me. 
+
+  CHURN - Error in console undefined method `in_stock?' for nil:NilClass. 
+  Wrong map from this @@products.map{|product|product.stock} to @@products.map do|product| .. as I want it to iterate and do something? Note: Still learning the map and iterations. 
+  Still had the same error... It turned out, I was adding using @product instead of product for my iterations.. It works now. 
+
+ 	Hmm... puts nanoblock.in_stock? # Should return true but it returned false.
+ 	In method in_stock? I put a ? after the statement, got syntax error, added true : false, reran it. 
+
+
+
+

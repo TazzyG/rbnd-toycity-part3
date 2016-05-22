@@ -1,3 +1,5 @@
+require 'json'
+
 class Customers
 	attr_reader :name 
 

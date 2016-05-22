@@ -1,3 +1,5 @@
+require 'json'
+
 class Transactions
 	# joins the customers and products, to show which customers have purchased which products.
 	attr_reader :product, :customer, :id

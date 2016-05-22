@@ -1,5 +1,10 @@
-class DuplicateProductError < StandardError
+class DuplicateProductError < StandardError	
 end
 
-class OutofStockError < StandardError
+class DuplicateCustomerError < StandardError	
 end
+
+class OutofStockError < StandardError	
+end
+
+
