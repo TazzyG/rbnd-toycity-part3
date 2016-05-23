@@ -4,13 +4,15 @@ class Customer
 
 	@@customers = []
 
- def initialize(options={})
-  	@name = options[:name]
-  	add_to_customers
-  end
-  def self.all
-  	@@customers
-  end
+	def initialize(options={})
+	  	@name = options[:name]
+	  	add_to_customers
+	end
+
+	def self.all
+		@@customers
+	end
+
   def self.find_by_name(search_criteria)
   	# return a single customer based on his/her name
   	@@customers.map do |customer|
@@ -36,7 +38,6 @@ class Customer
   		@@customers << self
     else
 			raise DuplicateCustomerError, "#{@title} already exists."
-
 		end
   end
 end

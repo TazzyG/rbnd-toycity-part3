@@ -25,6 +25,7 @@ class Transaction
   def self.all
   	@@transactions
   end
+  
   # need something to be able to match the transaction to the product or customer
   def self.find(id)
   	@@transactions.each do |record|

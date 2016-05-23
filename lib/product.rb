@@ -14,13 +14,15 @@ class Product
   	# return a single product based on its title
   	@@products.find { |product| product.title == search_criteria}
   end
+
   def reduce_stock
   	@stock = @stock - 1
   end
+
   def self.all
   	@@products
-  end
-  
+  end 
+
   def self.in_stock
   	products_in_stock = []
   	@@products.each do |product|
@@ -38,12 +40,14 @@ class Product
 	private
 
   def add_to_products
-  	
-  	unless @@products.map{|product|product.title}.include? @title
-  		@@products << self
+  	existing_title = false
+  	@@products.each do |product|
+  			existing_title = true if product.title == title
+		end
+   	if existing_title == false
+   		@@products << self
     else
 			raise DuplicateProductError, "#{@name} already exists."
-
 		end
   end
 
