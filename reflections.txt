@@ -1,83 +1,21 @@
 How long did you spend working on this project?
-	Started Lessons: May 20th, excited to use objects, methods, and apply lessons
-	It is now May 23. I spent between 2 and 4 hours a day. So, with breaking things, churning a bit, total time is 12 hours. 
+	Easily 20 hours, I broke my code lots and experimented. I'm at iterating as I learn. Sometimes, I am breaking things on Purpose. I am using irb on the console. If it weren't for that and git, I'd be insane. 
+
 
 What was the most rewarding challenge you conquered?
 
-	Top: Learning about self methods. (finding things with arrays)
-
-	Others: 
-	Getting more comfortable with classes, an ahaha was to add methods to use in one class and call it in another. 
-
-	Getting better at using looping through arrays to find and do things. 
-	Using a self.find before it could for example match product to transaction 
-
-	App.rb is like a series of TDD tests, RSpec is on my list to learn more. This is a nice precursor. I liked following along an uncommenting when it worked. Also, rewarding as it showed progress through required functions. 
-
-	Using irb and iterating through different pieces of code. Much friendlier and learned a ton. 
-
-	Git hub - can't enough into saving regularly 
+	Traversing through different classes and calling on a self class, use of loops. 
+	(example, Purchasing or Find Transactions by Customer)
 
 What two additional features did you build? Why?
-	1) Customer's transaction, for better customer profiling.  
-	2) Seasonal promotions, time sensitive pricing. Because that's how things really work. 
+
+	1) Customer's transaction, so when you talk to a customer you have the whole picture.
+	2) Discount Coupons, because it's much easier than having more products at different prices. 
 
 Where do you still have room to grow?
 
 	Arrays and hashes, I know I will need to get solid with mapping, creating new arrays and traversing
-	Classes, using super, I think that is coming
-	Doing things within arrays. For example transaction.customer doesn't just happen. 
+	Classes, using super, I think that is coming 
 	Instance versus class, will take time. 
 	Taking my brain from the lessons to creating code on my own. That daunting first blank file.
-
-
-
-**************************************************************************************************
-Notes (these are rambling, you don't have to read on) :-) 
-Initial challenge: Find away to prevent duplicate products (got be stumped at first, where to begin)
-Approach: 
-	Day 1 (4 hours)
-	Started by identifying classes and some of the methods I needed to work on. (a skeleton so to speak) and made sure I could run commented code in my console. 
-  Plan, build some methods based on our awesome knowledge, nothing like learning from my own code.
-
-  CHURN = (finally figured out product.title, loop).. did alot of searching on array methods with unsuccessful results, tried in console, saw that product = Product.new, I was able to see title but not Product.all (first hint that I was dealing with with an array of product items, not hashes)
-  I have become too used to Rails providing all of these for me. 
-
-  CHURN = Using self in the methods. NoMethodError: undefined method `find_by_title' for Product:Class 
-  Small Churn, needed to add attr_reader and options to find stock and price. 
-
-  Helpfull Techniques: Using the Console, and copying and pasting app.rb lines, Found some answers on StackOverflow, and Udacity forum. 
-
-  Day 2 (4 + hours)
-
-  Returning an Error (duplicate product): I am able to make this work in IRB but when I run app.rb it breaks?! Not sure if that is supposed to happen. Answer is change to irb app.rb 
-
-  CHURN = (Getting used to Self versus product) In the case of in stock, versus self.instock. methods for in_stock. I tried to do it as one method, could not make it work. Because @product.stock did not work. This is still a learning area for me. 
-
-  CHURN - Error in console undefined method `in_stock?' for nil:NilClass. 
-  Wrong map from this @@products.map{|product|product.stock} to @@products.map do|product| .. as I want it to iterate and do something? Note: Still learning the map and iterations. 
-  Still had the same error... It turned out, I was adding using @product instead of product for my iterations.. It works now. 
-
- 	Hmm... puts nanoblock.in_stock? # Should return true but it returned false.
- 	In method in_stock? I put a ? after the statement, got syntax error, added true : false, reran it.
- 	NOTE after, I needed to just test my self methods. 
-
- 	Having a couple of issues with product methods. 
- 	puts products_in_stock.include?(nanoblock) 
- 	will try tomorrow 
- 	I posted to the forum to see if I could get some help. Return tomorrow.
-
- 	Day 3 (2 hours)
- 	Happier day. The answer in the forum pointed me to errors in my methods. Spent some time cleaning up the self.methods. 
- 	puts products_in_stock.include?(nanoblock) # Should return true (was returning false)
- 	puts transaction2.product == nanoblock # Should return true (was returning false)
-
- 	played in the irb by pasting code from the file. Then followed back through my methods. For example, puts transaction2.product listed the whole transaction. Eventually got it. 
-
- 	Going to have some fun with options. Time for git push.
-
-
-
-
-
-
+	Got stuck a few times with when to use ? at the end of a boolean

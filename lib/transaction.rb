@@ -21,27 +21,18 @@ class Transaction
 
   def id
   	@id
-  end 
+  end
 
-  
-  # def self.in_stock
-  #   products_in_stock = []
-  #   @@products.each do |product|
-  #   # array of all products with stock greater than zero
-  #     products_in_stock << product if product.in_stock?
-  #   end
-  #   products_in_stock
-  # end
-  
-
-  def self.find_by_customer(customer_id)
+  def self.find_by_customer(customer)
     customer_transactions = []
-    @@transactions.each do |transaction, customer|
+    @@transactions.each do |transaction|
     # create an array of transactions for the customer
-      customer_transaction << transaction if transaction.customer.id == customer_id?
+      customer_transactions << transaction if transaction.customer == customer
     end
     customer_transactions
   end
+
+
 
   def self.all
   	@@transactions

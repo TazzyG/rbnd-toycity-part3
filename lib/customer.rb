@@ -24,6 +24,10 @@ class Customer
   		end
   	end
   end
+  def find_transactions
+    customer = self
+    Transaction.find_by_customer(customer)
+  end
 
   def purchase(product)
     customer = self
@@ -37,6 +41,8 @@ class Customer
   def id
     @id
   end
+  
+  
 
   # need something to be able to match the customer to transaction and other objects in future?
   def self.find(id)
