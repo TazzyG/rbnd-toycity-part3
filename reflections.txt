@@ -19,7 +19,7 @@ What was the most rewarding challenge you conquered?
 	Git hub - can't enough into saving regularly 
 
 What two additional features did you build? Why?
-	1) Customer's favorite Brands, so we know who to please and get it for them. 
+	1) Customer's transaction, for better customer profiling.  
 	2) Seasonal promotions, time sensitive pricing. Because that's how things really work. 
 
 Where do you still have room to grow?
@@ -40,7 +40,9 @@ Approach:
 	Started by identifying classes and some of the methods I needed to work on. (a skeleton so to speak) and made sure I could run commented code in my console. 
   Plan, build some methods based on our awesome knowledge, nothing like learning from my own code.
 
-  CHURN = (finally figured out product.title, needs loop).. did alot of searching on array methods with unsuccessful results, tried in console, saw that product = Product.new, I was able to see title but not Product.all (first hint that I was dealing with with an array of product items, not hashes) 
+  CHURN = (finally figured out product.title, loop).. did alot of searching on array methods with unsuccessful results, tried in console, saw that product = Product.new, I was able to see title but not Product.all (first hint that I was dealing with with an array of product items, not hashes)
+  I have become too used to Rails providing all of these for me. 
+
   CHURN = Using self in the methods. NoMethodError: undefined method `find_by_title' for Product:Class 
   Small Churn, needed to add attr_reader and options to find stock and price. 
 
@@ -48,7 +50,7 @@ Approach:
 
   Day 2 (4 + hours)
 
-  Returning an Error (duplicate product): I am able to make this work in IRB but when I run app.rb it breaks?! Not sure if that is supposed to happen. 
+  Returning an Error (duplicate product): I am able to make this work in IRB but when I run app.rb it breaks?! Not sure if that is supposed to happen. Answer is change to irb app.rb 
 
   CHURN = (Getting used to Self versus product) In the case of in stock, versus self.instock. methods for in_stock. I tried to do it as one method, could not make it work. Because @product.stock did not work. This is still a learning area for me. 
 
@@ -58,6 +60,7 @@ Approach:
 
  	Hmm... puts nanoblock.in_stock? # Should return true but it returned false.
  	In method in_stock? I put a ? after the statement, got syntax error, added true : false, reran it.
+ 	NOTE after, I needed to just test my self methods. 
 
  	Having a couple of issues with product methods. 
  	puts products_in_stock.include?(nanoblock) 

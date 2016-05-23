@@ -1,10 +1,13 @@
 class Customer
 
-	attr_reader :name 
+	attr_reader :name, :id
 
 	@@customers = []
+  @@id = 0
 
-	def initialize(options={})
+	def initialize(options = {})
+      @@id += 1
+      @id = @@id
 	  	@name = options[:name]
 	  	add_to_customers
 	end
@@ -23,21 +26,42 @@ class Customer
   end
 
   def purchase(product)
+    customer = self
     if product.in_stock?
-      Transaction.new(self.name, product)
+      Transaction.new(customer, product)
     else
       raise OutofStockError, "#{product.title} is out of stock"
+    end
+  end
+
+  def id
+    @id
+  end
+
+  # need something to be able to match the customer to transaction and other objects in future?
+  def self.find(id)
+    @@customers.each do |person| 
+      return person if person.id == id
+    end
+  end
+
+  def find_name_by_id(id)
+    @@customers.each do |person|
+      return person.name if person.id == id
     end
   end
 
   private
 
   def add_to_customers
-  	
-  	unless @@customers.map{|customer|customer.name}.include? @name
-  		@@customers << self
+    existing_name = false
+    @@customers.each do |customer|
+        existing_name = true if customer.name == name
+    end
+    if existing_name == false
+      @@customers << self
     else
-			raise DuplicateCustomerError, "#{@title} already exists."
-		end
+      raise DuplicateCustomerError, "#{@name} already exists."
+    end
   end
 end

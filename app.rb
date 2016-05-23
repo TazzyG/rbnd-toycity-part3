@@ -67,4 +67,15 @@ walter.purchase(firehouse)
 
 # FEATURES GO HERE
 
+# Feature 1 Find Transactions by Customer 
+
+# Need to be able to find customer in transation 
+transaction2.customer == walter # Should return true
+
+# walter = Customer.find_by_name("Walter Latimer")
+
+###############walterprofile = Transaction.find_by_customer(1)
+	 ###############undefined method `customer_id?' for Transaction:Class
+
+
 

@@ -1,0 +1,10 @@
+Feature 1 - Orders by Customer
+	Step 1 - Test to see if we can check a transaction against Walter - nope
+	Step 2 - Add a self search on Customer, can show it but transaction2.customer == walter is false (expect true)
+			2.a add id methood to customer
+	Step 3 - Create method in Transaction class to search by customer
+		NameError: undefined local variable or method `customer' for Transaction:Class
+			3.a  - add customer method to transaction class
+
+
+Feature 2 - Seasonal Pricing for Featured Items
