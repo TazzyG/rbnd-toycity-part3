@@ -8,6 +8,7 @@ Where do you still have room to grow?
 Notes: 
 Initial challenge: Find away to prevent duplicate products (defer this, need to learn more)
 Approach: 
+	Day 1 (4 hours)
 	1 Started by identifying classes and some of the methods I needed to work on. (a skeleton so to speak) and made sure I could run commented code in my console. 
 	2 (SCRAPPED ) Decided this is a set of reports with json data so will create data and reports for each class ? 
 	 Let's decide headings. (Main Title = Inventory Report) SubTitles, Customers, Inventory, Performance (instead of transactions) ... Assumption, that we even need reports. It would mean App.rb is just a test.  SCRAPPED THIS AS THIS IS JUST A PROTOTYPE, we will do proof of concept in the console, Reports come later. 
@@ -19,7 +20,7 @@ Approach:
 
   Helpfull Techniques: Using the Console, and copying and pasting app.rb lines, Found some answers on StackOverflow, and Udacity forum. 
 
-  Day 2 
+  Day 2 (4 + hours)
 
   Returning an Error (duplicate product): I am able to make this work in IRB but when I run app.rb it breaks?! Not sure if that is supposed to happen. 
 
@@ -30,7 +31,14 @@ Approach:
   Still had the same error... It turned out, I was adding using @product instead of product for my iterations.. It works now. 
 
  	Hmm... puts nanoblock.in_stock? # Should return true but it returned false.
- 	In method in_stock? I put a ? after the statement, got syntax error, added true : false, reran it. 
+ 	In method in_stock? I put a ? after the statement, got syntax error, added true : false, reran it.
+
+ 	Having a couple of issues with product methods. 
+ 	puts products_in_stock.include?(nanoblock) 
+ 	will try tomorrow 
+ 	I posted to the forum to see if I could get some help. Return tomorrow.
+
+ 	Day 3
 
 
 

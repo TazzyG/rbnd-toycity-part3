@@ -9,13 +9,10 @@ class Product
   	@stock = options[:stock]	
   	add_to_products
   end
+
 	def self.find_by_title(search_criteria)
   	# return a single product based on its title
-  	@@products.map do |product|
-  		if product.title == search_criteria
-  			return product
-  		end
-  	end
+  	@@products.find { |product| product.title == search_criteria}
   end
   def reduce_stock
   	@stock = @stock - 1
@@ -25,13 +22,12 @@ class Product
   end
   
   def self.in_stock
-  	stock_array = []
-  	@@products.map do |product|
+  	products_in_stock = []
+  	@@products.each do |product|
   	# array of all products with stock greater than zero
-	  	if product.in_stock?
-	  		stock_array << product
-	  	end
-	  end
+	  	products_in_stock << product if product.in_stock?
+  	end
+	  products_in_stock
   end
 
   def in_stock?
