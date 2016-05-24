@@ -10,8 +10,7 @@ What was the most rewarding challenge you conquered?
 What two additional features did you build? Why?
 
 	1) Customer's transaction, so when you talk to a customer you have the whole picture.
-	2) Discount Coupons, because it's much easier than having more products at different prices. 
-
+	2) TBA
 Where do you still have room to grow?
 
 	Arrays and hashes, I know I will need to get solid with mapping, creating new arrays and traversing

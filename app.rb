@@ -74,9 +74,3 @@ transaction2.customer == walter # Should return true
 
 # Find transactions for walter 
 walters_transactions = walter.find_transactions #expect a hash array of transactions
-
-###############walterprofile = Transaction.find_by_customer(1)
-	 ###############undefined method `customer_id?' for Transaction:Class
-
-
-
