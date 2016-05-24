@@ -1,20 +1,27 @@
 How long did you spend working on this project?
-	Easily 20 hours, I broke my code lots and experimented. I'm at iterating as I learn. Sometimes, I am breaking things on Purpose. I am using irb on the console. If it weren't for that and git, I'd be insane. 
+	Easily 25 hours, I broke my code lots and experimented. I'm at iterating as I learn. Sometimes, I am breaking things on Purpose. I am using irb on the console. If it weren't for that and git, I'd be insane. 
 
 
 What was the most rewarding challenge you conquered?
 
-	Traversing through different classes and calling on a self class, use of loops. 
-	(example, Purchasing or Find Transactions by Customer)
+	Bouncing through different classes and calling on methods. 
+	(example, Purchasing, Returning things or Find Transactions by Customer)
+	Debugging with the console, never used the console as much before :)
+	Reminded of reserved words when I tried to add "ref" to my transactions.
 
 What two additional features did you build? Why?
 
 	1) Customer's transaction, so when you talk to a customer you have the whole picture.
-	2) TBA
+	2) Returns, because things can happen and you need to reverse it. 
+
 Where do you still have room to grow?
 
 	Arrays and hashes, I know I will need to get solid with mapping, creating new arrays and traversing
 	Classes, using super, I think that is coming 
-	Instance versus class, will take time. 
+	Instance versus class, will take time but I learned a ton on that this week, that I did not get before.  
 	Taking my brain from the lessons to creating code on my own. That daunting first blank file.
 	Got stuck a few times with when to use ? at the end of a boolean
+	Mostly just practice. I am working on some projects in Rails while doing this. Getting better at Ruby is helping me tons. I didn't know what I didn't know.
+
+	The app.js was awesome this time because I used it as a TDD (list of things that worked) along the way. It also was a motivator as it showed progress. I use Git branch and merge a couple of times when I was intentionally breaking my code. 
+	
