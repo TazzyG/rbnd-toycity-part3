@@ -19,6 +19,11 @@ class Product
   	@stock = @stock - 1
   end
 
+  def add_stock
+    @stock = @stock + 1
+
+  end
+
   def self.all
   	@@products
   end 
@@ -35,6 +40,12 @@ class Product
   def in_stock?
   	# determine whether something is in stock
   	@stock > 0 ? true : false
+  end
+
+  def self.find(id)
+    @@product.each do |item| 
+      return item if item.id == id
+    end
   end
   
 	private

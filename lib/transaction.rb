@@ -1,22 +1,18 @@
 class Transaction
 	# joins the customers and products, to show which customers have purchased which products.
-	attr_reader :customer, :product, :id
+	attr_reader :customer, :product, :id, :refdoc
 
 	@@transactions = []
 	@@id = 0
   
 
-  def initialize(customer, product)
+  def initialize(customer, product, refdoc)
   	@@id += 1
   	@id = @@id	
   	@customer = customer
   	@product = product
-  	@product.reduce_stock
-  	add_to_transactions
-  end
-
-  def add_to_transactions	
-  		@@transactions << self
+    @refdoc = refdoc
+    process_transaction(refdoc)
   end
 
   def id
@@ -32,6 +28,17 @@ class Transaction
     customer_transactions
   end
 
+  def process_transaction(refdoc)
+    if refdoc == "return_auth_num"
+      @product.add_stock
+      @@transactions << self
+    elsif refdoc == "purchase_order_num"
+      @product.reduce_stock
+      @@transactions << self
+    else 
+      raise MissingDocsError, "Missing a PO or Return doc"
+    end
+  end
 
 
   def self.all
@@ -49,5 +56,4 @@ class Transaction
   def identify_customer
     @customer = Customer.find_by_name(customer.name)
   end
-  
 end

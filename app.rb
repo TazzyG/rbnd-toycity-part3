@@ -44,7 +44,7 @@ puts walter.name # Should return "Walter Latimer"
 
 # TRANSACTIONS
 
-transaction = Transaction.new(walter, nanoblock)
+transaction = Transaction.new(walter, nanoblock, "purchase_order_num")
 
 puts transaction.id # Should return 1
 puts transaction.product == nanoblock # Should return true
@@ -74,3 +74,30 @@ transaction2.customer == walter # Should return true
 
 # Find transactions for walter 
 walters_transactions = walter.find_transactions #expect a hash array of transactions
+
+puts walters_transactions.include?(nanoblock) # Should return true
+puts walters_transactions.include?(firehouse) # Should return false
+
+
+# Feature 2 Return Product for Credit
+
+# Validate Nanoblock Stock #10 
+puts nanoblock.stock
+
+# Validate number of Transactions before Return
+puts Transaction.all.count #2
+
+return_transaction = Transaction.new(walter, nanoblock, "return")
+
+walter_not_happy = walter.return(nanoblock)
+
+puts nanoblock.stock
+
+
+
+
+
+
+
+
+

@@ -1,6 +1,6 @@
 class Customer
 
-	attr_reader :name, :id
+	attr_reader :name, :id, :ref
 
 	@@customers = []
   @@id = 0
@@ -28,14 +28,20 @@ class Customer
     customer = self
     Transaction.find_by_customer(customer)
   end
-
   def purchase(product)
-    customer = self
     if product.in_stock?
-      Transaction.new(customer, product)
+      refdoc = "purchase_order_num"
+      Transaction.new(self, product, refdoc)
+      #puts "Thanks for your Purchase"
     else
       raise OutofStockError, "#{product.title} is out of stock"
     end
+  end
+
+  def return(product)    
+    refdoc = "return_auth_num"
+    Transaction.new(self, product, refdoc)  
+    #puts "Your product has been returned"
   end
 
   def id

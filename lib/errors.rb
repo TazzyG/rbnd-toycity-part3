@@ -7,4 +7,7 @@ end
 class OutofStockError < StandardError	
 end
 
+class MissingDocsError < StandardError
+end
+
 
