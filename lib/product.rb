@@ -16,11 +16,11 @@ class Product
   end
 
   def reduce_stock
-  	@stock = @stock - 1
+  	@stock - 1
   end
 
   def add_stock
-    @stock = @stock + 1
+    @stock + 1
 
   end
 
@@ -39,7 +39,7 @@ class Product
 
   def in_stock?
   	# determine whether something is in stock
-  	@stock > 0 ? true : false
+  	@stock > 0 
   end
 
   def self.find(id)

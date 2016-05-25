@@ -33,8 +33,12 @@ class Transaction
       @product.add_stock
       @@transactions << self
     elsif refdoc == "purchase_order_num"
-      @product.reduce_stock
-      @@transactions << self
+      if product.in_stock?
+        @product.reduce_stock
+        @@transactions << self
+      else 
+        raise OutofStockError, '#{product.title} is out of stock'
+    end
     else 
       raise MissingDocsError, "Missing a PO or Return doc"
     end

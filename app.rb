@@ -76,7 +76,7 @@ transaction2.customer == walter # Should return true
 walters_transactions = walter.find_transactions #expect a hash array of transactions
 
 puts walters_transactions.any?{|product| nanoblock} # Should return true
-puts walters_transactions.any?{|product| firehouse} # Should return false
+puts walters_transactions.any?{|product| firehouse} # Should return true (because it's still a transaction)
 
 
 # Feature 2 Return Product for Credit
